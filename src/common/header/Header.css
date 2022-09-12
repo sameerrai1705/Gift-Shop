@@ -20,6 +20,33 @@
   width: auto;
   height: auto;
 }
+
+.lombu{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  color: #e94560;
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:8%;
+    left: 10%;
+    transform: translate(-50%,-10%);
+    width: 100%;
+    text-align: center;
+  
+}
+.lombu span{
+  font-size: 55px;
+  font-weight: bolder;
+  text-shadow: -0.08em 0.03em 0.12em rgba(39, 39, 37, 0.878);
+}
+
+.lombu span:not(:first-child){
+ margin-left: -6px;
+}
+
+
 .search .width {
   width: 20%;
 }

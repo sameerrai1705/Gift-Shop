@@ -15,15 +15,19 @@ const Search = ({ CartItem }) => {
     <>
       <section className='search'>
         <div className='container c_flex'>
-          <div className='logo width '>
-            Gift Shop
+        <div className='logo-width'>
+          <div className="lombu">
+                
+                    <span>G</span>
+                    <span>i</span>
+                    <span>f</span>
+                    <span>t</span>
+                    <span>&nbsp;&nbsp;</span>
+                    <span>B</span>
+                    <span>o</span>
+                    <span>x</span>
+            </div>
           </div>
-
-          {/* <div className='search-box f_flex'>
-            <i className='fa fa-search'></i>
-            <input type='text' placeholder='Search and hit enter...' />
-            <span>All Category</span>
-          </div> */}
 
           <div className='icon f_flex width'>
             <i className='fa fa-user icon-circle'></i>
