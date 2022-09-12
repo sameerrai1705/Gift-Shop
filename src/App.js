@@ -9,12 +9,23 @@ import Footer from "./common/footer/Footer"
 import Sdata from "./components/shops/Sdata"
 import data from "./components/sameer/links"
 import Sam from "./components/sameer/sam"
+import Random from "./components/random/Random"
+import random from "./components/random/randomthings"
+import V from "./valentine/v"
+import Info from "./valentine/info"
+import TopCate from "./components/top/TopCate"
+import NewArrivals from "./components/newarrivals/NewArrivals"
+import Shop from "./components/shops/Shop"
+import FlashDeals from "./components/flashDeals/FlashDeals"
+import Discount from "./components/discount/Discount"
 
 function App() {
   
-  const { productItems } = Data
-  const { shopItems } = Sdata
-  const {shopItem} = data
+  const { productItems } = Data;
+  const { shopItems } = Sdata;
+  const {shopItem} = data;
+  const {randomItems} = random;
+  const {information} = Info;
  
   const [CartItem, setCartItem] = useState([])
 
@@ -44,13 +55,34 @@ function App() {
         <Header CartItem={CartItem} />
         <Switch>
           <Route path='/' exact>
-            <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} shopItem = {shopItem} />
+            <Pages information = {information}  randomItems = {randomItems} productItems={productItems} addToCart={addToCart} shopItems={shopItems} shopItem = {shopItem} />
           </Route>
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
           <Router path='/sameer' exact>
               <Sam shopItem = {shopItem} addToCart={addToCart}/>
+          </Router>
+          <Router path = '/random' exact>
+            <Random randomItems = {randomItems} addToCart = {addToCart} />
+          </Router>
+          <Router path = '/valentine' >
+            <V information = {information} addToCart = {addToCart} />
+          </Router>
+          <Router path = '/top' >
+            <TopCate />
+          </Router>
+          <Router path = '/newarrivals' >
+            <NewArrivals />
+          </Router>
+          <Router path = '/flashDeals' >
+            <FlashDeals productItems = {productItems} addToCart = {addToCart} />
+          </Router>
+          <Router path = '/shops' >
+            <Shop addToCart={addToCart} shopItems = {shopItems}/>
+          </Router>
+          <Router path = '/discount' >
+            <Discount />
           </Router>
         </Switch>
         <Footer />

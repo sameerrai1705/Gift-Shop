@@ -1,8 +1,8 @@
 import React from "react";
-import './sam.css';
-import Samel from "./samel";
+import './rand.css';
+import RandomItem from "./RandomItem";
 
-const Sam = (shopItem , addToCart) => {
+const Random = (randomItems , addToCart) => {
     const some = {
         display : "flex",
         alignItems : "center",
@@ -10,16 +10,16 @@ const Sam = (shopItem , addToCart) => {
     }
     return (
         <>
-        {/* {console.log(shopItem)}; */}
-            <section className='shop background' style={some}>
+        {/* {console.log(randomItems)} */}
+            <section className='shop background ' style={some}>
             <div className='contentWidth'>
                 <div className='heading d_flex'>
                 <div className='heading-left row  f_flex'>
-                    <h2>Top Gifts</h2>
+                    <h2>Random Gifts</h2>
                 </div>
                 </div>
                 <div className='product-content  grid1'>
-                <Samel addToCart={addToCart} shopItem={shopItem} />
+                <RandomItem addToCart={addToCart} randomItems={randomItems} />
                 </div>
             </div>
         </section>
@@ -27,4 +27,4 @@ const Sam = (shopItem , addToCart) => {
     );
 }
 
-export default Sam;
+export default Random;

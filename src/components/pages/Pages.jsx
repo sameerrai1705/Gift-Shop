@@ -8,8 +8,9 @@ import Shop from "../shops/Shop"
 import Annocument from "../annocument/Annocument"
 import Wrapper from "../wrapper/Wrapper"
 import Sam from "../sameer/sam"
+import V from "../../valentine/v"
 
-const Pages = ({ productItems, addToCart, CartItem, shopItems , shopItem }) => {
+const Pages = ({information , productItems, addToCart, CartItem, shopItems , shopItem }) => {
   return (
     <>
       <Home CartItem={CartItem} />
@@ -19,6 +20,7 @@ const Pages = ({ productItems, addToCart, CartItem, shopItems , shopItem }) => {
       <Discount />
       <Shop shopItems={shopItems} addToCart={addToCart} />
       {/* <Sam shopItem = {shopItem} addToCart = {addToCart} /> */}
+      {/* <V information={information} addToCart = {addToCart} /> */}
       <Annocument />
       <Wrapper />
     </>

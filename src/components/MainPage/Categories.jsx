@@ -1,63 +1,67 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   const data = [
     {
       cateImg: "https://imgcdn.floweraura.com/a-cup-of-love-9977377gf-A.jpg",
-      cateName: "Chocolates",
+      cateName: "top",
     },
     {
       cateImg: "./images/category/cat2.png",
-      cateName: "Cards",
+      cateName: "valentine",
     },
-    {
-      cateImg: "./images/category/cat3.png",
-      cateName: "Gaming Cars",
-    },
-    {
-      cateImg: "./images/category/cat4.png",
-      cateName: "Home",
-    },
+
     {
       cateImg: "./images/category/cat5.png",
-      cateName: "Gifts",
+      cateName: "sameer",
     },
     {
       cateImg: "./images/category/cat6.png",
-      cateName: "Guitars",
+      cateName: "valentine",
     },
     {
       cateImg: "./images/category/cat8.png",
-      cateName: "Teddy",
+      cateName: "shops",
     },
     {
       cateImg: "./images/category/cat9.png",
-      cateName: "Baby Toys",
+      cateName: "newarrivals",
     },
     {
       cateImg: "./images/category/cat10.png",
-      cateName: "Watches",
+      cateName: "random",
+    },
+    {
+      cateImg: "./images/category/cat4.png",
+      cateName: "discount",
     },
     {
       cateImg: "./images/category/cat11.png",
-      cateName: "Books",
+      cateName: "flashDeals",
     },
-  ]
+    {
+      cateImg: "./images/category/cat3.png",
+      cateName: "shops",
+    },
+  ];
 
   return (
     <>
-      <div className='category'>
+      <div className="category">
         {data.map((value, index) => {
           return (
-            <div className='box f_flex' key={index}>
-              <img src={value.cateImg} alt='' />
-              <span>{value.cateName}</span>
+            <div className="box f_flex" key={index}>
+              <Link to={value.cateName}>
+                <img src={value.cateImg} alt="" />
+                <span>{value.cateName}</span>
+              </Link>
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;

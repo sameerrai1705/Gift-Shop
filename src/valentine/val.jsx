@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./sam.css";
+import "./v.css";
 
-const Samel = ({ shopItem, addToCart }) => {
+const Val = ({information , addToCart }) => {
   const [count, setCount] = useState(0);
   const increment = () => {
     setCount(count + 1);
@@ -16,13 +16,13 @@ const Samel = ({ shopItem, addToCart }) => {
 
   return (
     <>
-
-      {shopItem.shopItem.map((item, index) => {
+        
+      {information.map((item, index) => {
         return (
           <div className="box">
             <div className="product mtop">
               <div className="img">
-                <img src={item.src} style={size} alt="" />
+                <img src={item.cover} style={size} alt="" />
                 <div className="product-like">
                   <label>{count}</label> <br />
                   <i className="fa-regular fa-heart" onClick={increment}></i>
@@ -37,7 +37,7 @@ const Samel = ({ shopItem, addToCart }) => {
                   <i className="fa fa-star"></i>
                 </div>
                 <div className="price">
-                  <button onClick={() => shopItem.addToCart(item.src)}>
+                  <button onClick={() => information.addToCart(item.cover)}>
                     <i className="fa fa-plus"></i>
                   </button>
                 </div>
@@ -51,4 +51,4 @@ const Samel = ({ shopItem, addToCart }) => {
   );
 };
 
-export default Samel;
+export default Val;

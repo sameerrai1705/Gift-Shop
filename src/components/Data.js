@@ -25,7 +25,7 @@ const Data = {
       id: 4,
       discount: 40,
       cover: "./images/flash/flash-4.png",
-      name: "Pickles",
+      name: "Jar gift",
       price: 50,
     },
     {
@@ -39,7 +39,7 @@ const Data = {
       id: 6,
       discount: 50,
       cover: "./images/flash/flash-3.png",
-      name: "Laura lasan",
+      name: "Our Special",
       price: 100,
     },
   ],
